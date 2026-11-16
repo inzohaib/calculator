@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131d">
+  <meta name="description" content="A clean, responsive browser calculator built with vanilla HTML, CSS and JavaScript.">
+  <title>Calculator — Zohaib</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Calculator home"><span class="brand-mark">＋</span> calc<span class="brand-dot">.</span></a>
+      <span class="top-note">A little tool, built with code.</span>
+    </header>
+
+    <section class="workspace" aria-label="Calculator">
+      <div class="intro">
+        <p class="eyebrow">SIMPLE BY DESIGN</p>
+        <h1>Make it <span>add up.</span></h1>
+        <p class="subhead">A handy calculator for everyday maths.</p>
+      </div>
+
+      <div class="calculator">
+        <div class="display" aria-live="polite" aria-atomic="true">
+          <div class="display-meta"><span>STANDARD</span><span class="live-dot">● READY</span></div>
+          <div id="expression" class="expression" aria-label="Expression">&nbsp;</div>
+          <output id="result" class="result" aria-label="Result">0</output>
+        </div>
+
+        <div class="keypad" aria-label="Calculator keys">
+          <button class="key utility" data-action="clear">AC</button>
+          <button class="key utility" data-action="sign" aria-label="Toggle sign">±</button>
+          <button class="key utility" data-action="percent">%</button>
+          <button class="key operator" data-value="/" aria-label="Divide">÷</button>
+
+          <button class="key" data-value="7">7</button>
+          <button class="key" data-value="8">8</button>
+          <button class="key" data-value="9">9</button>
+          <button class="key operator" data-value="*" aria-label="Multiply">×</button>
+
+          <button class="key" data-value="4">4</button>
+          <button class="key" data-value="5">5</button>
+          <button class="key" data-value="6">6</button>
+          <button class="key operator" data-value="-" aria-label="Subtract">−</button>
+
+          <button class="key" data-value="1">1</button>
+          <button class="key" data-value="2">2</button>
+          <button class="key" data-value="3">3</button>
+          <button class="key operator" data-value="+" aria-label="Add">+</button>
+
+          <button class="key utility" data-action="backspace" aria-label="Delete last character">⌫</button>
+          <button class="key" data-value="0">0</button>
+          <button class="key" data-value=".">.</button>
+          <button class="key equals" data-action="equals" aria-label="Calculate">=</button>
+        </div>
+        <p class="keyboard-hint">TIP: You can use your keyboard, too.</p>
+      </div>
+
+      <aside class="history">
+        <div class="history-heading"><div><p class="eyebrow">YOUR RECENT MATH</p><h2>History</h2></div><button id="clear-history" class="text-button" type="button">Clear</button></div>
+        <ol id="history-list" class="history-list"><li class="empty-history">Your calculations will show up here.</li></ol>
+      </aside>
+    </section>
+
+    <footer class="footer"><span>Designed & built by <a href="https://github.com/inzohaib" target="_blank" rel="noreferrer">Zohaib</a></span><span>HTML · CSS · JavaScript</span></footer>
+  </main>
+</body>
+</html>
