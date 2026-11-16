@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+:root{color-scheme:dark;--bg:#10131d;--panel:#191e2b;--panel2:#22293a;--line:#2b3347;--text:#f4f6fb;--muted:#8993a8;--accent:#a6f078;--accent-dark:#192817}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 0%,#202a39 0%,var(--bg) 55%);color:var(--text);font-family:"DM Sans",system-ui,sans-serif}
+button{font:inherit}
+.page{width:min(1060px,calc(100% - 40px));min-height:100vh;margin:auto;display:flex;flex-direction:column}
+.topbar,.footer{display:flex;align-items:center;justify-content:space-between}
+.topbar{height:82px;border-bottom:1px solid #ffffff10}
+.brand{font-size:22px;font-weight:800;letter-spacing:-1px;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:9px}
+.brand-mark{display:grid;place-items:center;width:29px;height:29px;border-radius:9px;background:var(--accent);color:#152014;font-size:20px}
+.brand-dot,.intro h1 span{color:var(--accent)}
+.top-note,.footer{font-size:12px;color:var(--muted)}
+.workspace{width:min(850px,100%);margin:auto;display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:24px;align-items:start;padding:58px 0}
+.intro{grid-column:1/-1;margin-bottom:3px}
+.eyebrow{font:500 10px "DM Mono",monospace;letter-spacing:1.8px;color:var(--accent);margin:0 0 12px}
+h1{font-size:clamp(34px,6vw,48px);line-height:1.05;letter-spacing:-2.2px;margin:0}
+.subhead{color:var(--muted);font-size:14px;margin:12px 0 0}
+.calculator,.history{background:linear-gradient(145deg,#1b2130,#171c28);border:1px solid var(--line);border-radius:22px;box-shadow:0 24px 65px #0003}
+.calculator{padding:19px}
+.display{min-height:143px;padding:8px 8px 17px;display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-end;overflow:hidden}
+.display-meta{width:100%;display:flex;justify-content:space-between;font:10px "DM Mono",monospace;letter-spacing:1.2px;color:var(--muted);margin-bottom:auto}
+.live-dot{color:var(--accent);font-size:9px}
+.expression{width:100%;min-height:24px;text-align:right;color:var(--muted);font:14px "DM Mono",monospace;overflow-wrap:anywhere}
+.result{display:block;max-width:100%;font:500 clamp(34px,7vw,48px) "DM Mono",monospace;letter-spacing:-2px;overflow-wrap:anywhere;text-align:right}
+.keypad{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.key{height:62px;border:1px solid #ffffff08;border-radius:14px;background:var(--panel2);color:var(--text);font-size:19px;font-weight:600;cursor:pointer;transition:background .15s,transform .15s,border-color .15s}
+.key:hover{background:#303a50;border-color:#ffffff20}
+.key:active{transform:scale(.96)}
+.key.utility{background:#252d3e;color:#bdc6d8}
+.key.operator{background:#293548;color:var(--accent);font-size:22px}
+.key.equals{background:var(--accent);color:#172014;font-size:25px}
+.key:focus-visible,.text-button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.keyboard-hint{text-align:center;color:var(--muted);font-size:10px;letter-spacing:.7px;margin:16px 0 0}
+.history{padding:21px 18px;min-height:260px}
+.history-heading{display:flex;align-items:center;justify-content:space-between}
+.history-heading .eyebrow{font-size:9px;margin-bottom:7px}
+h2{font-size:21px;letter-spacing:-.7px;margin:0}
+.text-button{border:0;background:none;color:var(--accent);font-size:11px;cursor:pointer;padding:6px}
+.history-list{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:13px}
+.history-list li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #ffffff0c;padding-bottom:11px;font:11px "DM Mono",monospace}
+.history-list .history-expression{color:var(--muted);overflow-wrap:anywhere}
+.history-list .history-result{color:var(--text);white-space:nowrap}
+.empty-history{color:var(--muted);font:12px "DM Sans",sans-serif!important;line-height:1.6;border:0!important}
+.footer{padding:20px 0 24px;border-top:1px solid #ffffff10}
+.footer a{color:var(--text);text-decoration:none}
+.footer a:hover{color:var(--accent)}
+@media(max-width:700px){.workspace{grid-template-columns:1fr;max-width:440px;padding:42px 0}.intro{grid-column:auto}.history{min-height:auto}.top-note{font-size:10px}.page{width:min(100% - 28px,500px)}}
+@media(max-width:380px){.calculator{padding:13px}.keypad{gap:7px}.key{height:56px}.footer{font-size:10px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
